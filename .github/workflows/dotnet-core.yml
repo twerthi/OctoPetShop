@@ -30,7 +30,7 @@ jobs:
         mkdir artifacts
         mkdir artifacts/OctopusSamples.OctoPetShop.Database
     - name: Publish OctoPetShopDatabase
-       run dotnet publish OctopusSamples.OctoPetShop.Database/OctopusSamples.OctoPetShop.Database.csproj --configuration Release --no-restore --output artifacts/OctopusSamples.OctoPetShot.Database
+      run: dotnet publish OctopusSamples.OctoPetShop.Database/OctopusSamples.OctoPetShop.Database.csproj --configuration Release --no-restore --output artifacts/OctopusSamples.OctoPetShot.Database
     - name: Install Octopus CLI
       run: |
         sudo apt update && sudo apt install --no-install-recommends gnupg curl ca-certificates apt-transport-https && \
