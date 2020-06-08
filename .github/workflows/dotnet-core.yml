@@ -37,3 +37,7 @@ jobs:
         curl -sSfL https://apt.octopus.com/public.key | sudo apt-key add - && \
         sudo sh -c "echo deb https://apt.octopus.com/ stable main > /etc/apt/sources.list.d/octopus.com.list" && \
         sudo apt update && sudo apt install octopuscli
+    - name: Package OctoPetShopDatabase
+      run: |
+        octo pack --id="OctoPetShop.Database" --format="Zip" --version="$PACKAGE_VERSION" --basePath="artifacts/OctopusSamples.OctoPetShop.Database" --outFolder="artifacts"
+      
