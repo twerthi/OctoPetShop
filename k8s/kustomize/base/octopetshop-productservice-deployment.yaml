@@ -15,8 +15,6 @@ spec:
       containers:
         - name: productservice
           image: octopussamples/octopetshop-productservice
-          #image: octopetshop_productservice
-          #imagePullPolicy: Never
           env:
             - name: OPSConnectionString
               valueFrom:
