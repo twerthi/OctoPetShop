@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: octopetshop-productservice-deployment
-  codefresh.io/product: octopetshop
 spec:
   replicas: 1
   selector:
