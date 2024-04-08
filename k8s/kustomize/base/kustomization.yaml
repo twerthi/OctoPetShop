@@ -16,5 +16,5 @@ resources:
 secretGenerator:
   - name: database-credentials
     literals:
-    - sa-password="#{Project.SQLServer.SA.Password}"
-    - connectionstring="Data Source=octopetshop-sqlserver-cluster-ip-service;Initial Catalog=OctoPetShop; User ID=sa; Password=#{Project.SQLServer.SA.Password}"
+    - sa-password="%!s*aA^s^901"
+    - connectionstring="Data Source=octopetshop-sqlserver-cluster-ip-service;Initial Catalog=OctoPetShop; User ID=sa; Password=%!s*aA^s^901"
