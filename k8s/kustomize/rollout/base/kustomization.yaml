@@ -18,4 +18,6 @@ secretGenerator:
     literals:
     - sa-password="%!s*aA^s^901"
     - connectionstring="Data Source=octopetshop-sqlserver-cluster-ip-service;Initial Catalog=OctoPetShop; User ID=sa; Password=%!s*aA^s^901"
-    disableNameSuffixHash: true
+
+generatorOptions:
+  disableNameSuffixHash: true
