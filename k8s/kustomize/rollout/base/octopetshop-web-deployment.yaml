@@ -27,3 +27,10 @@ spec:
               value: http://octopetshop-productservice-cluster-ip-service:5011/
             - name: ShoppingCartServiceBaseUrl
               value: http://octopetshop-shoppingcart-cluster-ip-service:5012
+  strategy:
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: {duration: 10s}
+      - setWeight: 60
+      - pause: {duration: 10s}              

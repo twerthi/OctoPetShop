@@ -23,3 +23,10 @@ spec:
                 secretKeyRef:
                   name: database-credentials
                   key: connectionstring
+  strategy:
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: {duration: 10s}
+      - setWeight: 60
+      - pause: {duration: 10s}                  
