@@ -6,7 +6,7 @@ spec:
   goTemplate: true
   goTemplateOptions: ["missingkey=error"]
   generators:
-  - cluster: {} # Automatically use all clusters defined within ArgoCD
+  - clusters: {} # Automatically use all clusters defined within ArgoCD
   template:
     metadata:
       name: '{{.name}}-octopetshop-development'
