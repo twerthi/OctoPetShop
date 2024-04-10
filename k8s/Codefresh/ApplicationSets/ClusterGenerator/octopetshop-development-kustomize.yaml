@@ -9,7 +9,7 @@ spec:
   - cluster: {} # Automatically use all clusters defined within ArgoCD
   template:
     metadata:
-      name: '{{.name}}-octopetshop-development'
+      name: '{{name}}-octopetshop-development'
     spec:
       project: default
       source:
@@ -17,7 +17,7 @@ spec:
         targetRevision: HEAD
         path: k8s/kustomize/deployment/overlays/Development
       destination:
-        server: '{{.server}}'
+        server: '{{server}}'
         namespace: development
       syncPolicy:
         automated: 
