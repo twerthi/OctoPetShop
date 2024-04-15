@@ -1,7 +1,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generatedName: octopetshop-dbup-
+  name: octopetshop-dbup
+  generateName: octopetshop-dbup-
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
