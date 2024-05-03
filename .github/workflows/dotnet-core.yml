@@ -44,6 +44,16 @@ jobs:
       with:
         packages: |
           octopetshop.database.${{ env.PACKAGE_VERSION }}.zip
+    - name: Push build information to Octopus Deploy 🐙
+      uses: OctopusDeploy/push-build-information-action@v3
+      env:
+        OCTOPUS_URL: ${{ secrets.OCTOPUSSERVERURL }}
+        OCTOPUS_API_KEY: ${{ secrets.OCTOPUSSERVERAPIKEY }}
+        OCTOPUS_SPACE: ${{ secrets.OCTOPUSSERVERSPACE }}
+      with:
+        packages: |
+          'octopetshop.database'
+        version: '${{ env.PACKAGE_VERSION }}'
 #    - name: Install Octopus CLI
 #      run: |
 #        sudo apt update && sudo apt install --no-install-recommends gnupg curl ca-certificates apt-transport-https && \
