@@ -52,7 +52,7 @@ jobs:
         OCTOPUS_SPACE: ${{ secrets.OCTOPUSSERVERSPACE }}
       with:
         packages: |
-          'octopetshop.database'
+          octopetshop.database
         version: '${{ env.PACKAGE_VERSION }}'
 #    - name: Install Octopus CLI
 #      run: |
