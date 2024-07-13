@@ -4,6 +4,8 @@ namespace: test
 resources:
 - ../../base
 
+# Making a change to get it synced
+
 patches:
   - target:
       kind: Deployment
