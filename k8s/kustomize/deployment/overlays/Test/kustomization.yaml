@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: test
+namespace: development
 resources:
-- ../../base
+  - ../../base
 
 patches:
   - target:
@@ -17,3 +17,16 @@ patches:
       kind: Service
       name: octopetshop-web-cluster-ip-service
     path: octopetshop-web-cluster-ip-service.yaml
+images:
+  - name: octopussamples/octopetshop-database
+    newName: twerthi/octopetshop-database
+    newTag: 2024.194.23.3836
+  - name: octopussamples/octopetshop-productservice
+    newName: twerthi/octopetshop-productservice
+    newTag: 2024.194.23.3836
+  - name: octopussamples/octopetshop-shoppingcartservice
+    newName: twerthi/octopetshop-shoppingcartservice
+    newTag: 2024.194.23.3836
+  - name: octopussamples/octopetshop-web
+    newName: twerthi/octopetshop-web
+    newTag: 2024.194.23.3836
