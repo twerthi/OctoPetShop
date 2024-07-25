@@ -3,7 +3,7 @@ kind: Kustomization
   
 resources:
 - octopetshop-database-job.yaml
-- octopetshop-loadbalancer.yaml
+- octopetshop-ingress.yaml
 - octopetshop-productservice-cluster-ip-service.yaml
 - octopetshop-productservice-deployment.yaml
 - octopetshop-shoppingcart-cluster-ip-service.yaml
