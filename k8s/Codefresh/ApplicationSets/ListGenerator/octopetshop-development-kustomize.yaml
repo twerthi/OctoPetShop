@@ -13,6 +13,9 @@ spec:
   template:
     metadata:
       name: '{{cluster}}-octopetshop-development'
+      annotations:
+        codefresh.io/product: octopetshop
+
     spec:
       project: default
       source:
