@@ -12,7 +12,7 @@ patches:
   - target: 
       kind: Ingress
       name: octopetshop-ingress
-    path: octopetshop-ignress.yaml
+    path: octopetshop-ingress.yaml
   - target:
       kind: Service
       name: octopetshop-web-cluster-ip-service
