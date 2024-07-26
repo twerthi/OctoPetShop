@@ -23,13 +23,13 @@ patches:
 images:
   - name: octopussamples/octopetshop-database
     newName: twerthi/octopetshop-database
-    newTag: 2024.207.20.0912
+    newTag: 2024.194.23.3836
   - name: octopussamples/octopetshop-productservice
     newName: twerthi/octopetshop-productservice
-    newTag: 2024.207.20.0912
+    newTag: 2024.194.23.3836
   - name: octopussamples/octopetshop-shoppingcartservice
     newName: twerthi/octopetshop-shoppingcartservice
-    newTag: 2024.207.20.0912
+    newTag: 2024.194.23.3836
   - name: octopussamples/octopetshop-web
     newName: twerthi/octopetshop-web
-    newTag: 2024.207.20.0912
+    newTag: 2024.194.23.3836
