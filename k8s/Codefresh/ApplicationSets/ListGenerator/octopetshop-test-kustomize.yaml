@@ -21,7 +21,7 @@ spec:
       source:
         repoURL: https://github.com/twerthi/OctoPetShop.git
         targetRevision: HEAD
-        path: k8s/kustomize/rollout/overlays/Test
+        path: k8s/kustomize/deployment/overlays/Test
       destination:
         server: '{{url}}'
         namespace: test
