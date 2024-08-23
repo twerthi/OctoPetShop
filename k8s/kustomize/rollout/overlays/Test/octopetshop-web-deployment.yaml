@@ -1,6 +1,6 @@
 - op: replace
   path: /spec/template/spec/containers/0/ports/0/containerPort
-  value: 5010
+  value: 5000
 - op: replace
   path: /spec/template/spec/containers/0/ports/1/containerPort
-  value: 5011
+  value: 5001
