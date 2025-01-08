@@ -14,7 +14,7 @@ spec:
     metadata:
       name: '{{cluster}}-octopetshop-test'
       annotations:
-        codefresh.io/product: octopetshop
+        codefresh.io/product: octopetshop-{{cluster}}
 
     spec:
       project: default
