@@ -18,7 +18,7 @@ patches:
       name: octopetshop-web-cluster-ip-service
     path: octopetshop-web-cluster-ip-service.yaml
 
-images:
+images: 
 - name: octopussamples/octopetshop-database
   newName: twerthi/octopetshop-database
   newTag: 2025.057.00.4810
