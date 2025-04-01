@@ -1,4 +1,4 @@
-name: Codefres Build
+name: Codefresh Build
 
 on:
   workflow_dispatch:
@@ -17,3 +17,6 @@ jobs:
     - name: Build Docker Images
       run: |
         docker build -t twerthi/octopetshop.database:${{ env.PACKAGE_VERSION }} -f OctopusSamples.OctoPetShop.Database/Dockerfile OctopusSamples.OctoPetShop.Database
+        docker build -t twerthi/octopetshop.productservice:${{ env.PACKAGE_VERSION }} -f OctopusSamples.OctoPetShop.ProductService/Dockerfile OctopusSamples.OctoPetShop.ProductService
+        docker build -t twerthi/octopetshop.shoppingcartservice:${{ env.PACKAGE_VERSION }} -f OctopusSamples.OctoPetShop.ShoppingCartService/Dockerfile OctopusSamples.OctoPetShop.ShoppingCartService
+        docker build -t twerthi/octopetshop.web:${{ env.PACKAGE_VERSION }} -f OctopusSamples.OctoPetShop.Web/Dockerfile OctopusSamples.OctoPetShop.Web
