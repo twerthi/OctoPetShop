@@ -1,0 +1,19 @@
+name: Codefres Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set Version
+      run: echo "PACKAGE_VERSION=$(date +'%Y.%m.%d').$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+
+    # Build docker images
+    - name: Build Docker Images
+      run: |
+        docker build -t twerthi/octopetshop.database:${{ env.PACKAGE_VERSION }} -f OctopusSamples.OctoPetShop.Database/Dockerfile OctopusSamples.OctoPetShop.Database
