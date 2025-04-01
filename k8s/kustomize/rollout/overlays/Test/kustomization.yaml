@@ -1,0 +1,33 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: test
+resources:
+  - ../../base
+
+patches:
+  - target:
+      kind: Deployment
+      name: octopetshop-web-deployment
+    path: octopetshop-web-deployment.yaml
+  - target:
+      kind: Ingress
+      name: octopetshop-ingress
+    path: octopetshop-ingress.yaml
+  - target:
+      kind: Service
+      name: octopetshop-web-cluster-ip-service
+    path: octopetshop-web-cluster-ip-service.yaml
+
+images:
+  - name: octopussamples/octopetshop-database
+    newName: twerthi/octopetshop-database
+    newTag: 2025.080.20.1502
+  - name: octopussamples/octopetshop-productservice
+    newName: twerthi/octopetshop-productservice
+    newTag: 2025.080.20.1502
+  - name: octopussamples/octopetshop-shoppingcartservice
+    newName: twerthi/octopetshop-shoppingcartservice
+    newTag: 2025.080.20.1502
+  - name: octopussamples/octopetshop-web
+    newName: twerthi/octopetshop-web
+    newTag: 2025.080.20.1502
