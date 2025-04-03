@@ -11,7 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set Version
-      run: echo "PACKAGE_VERSION=$(date +'%Y.%m.%d').$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+      run: |
+         echo "PACKAGE_VERSION=$(date +'%Y.%m.%d').$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+         jq '.AppSettings.AppVersion = "$PACKAGE_VERSION"' OctopusSamples.OctoPetShop.Web/appsettings.json > tmp.json && mv tmp.json OctopusSamples.OctoPetShop.Web/appsettings.json
+         jq '.AppSettings.AppVersion' OctopusSamples.OctoPetShop.Web/appsettings.json
 
     # Login to dockerhub
     - name: Login to Docker Hub
