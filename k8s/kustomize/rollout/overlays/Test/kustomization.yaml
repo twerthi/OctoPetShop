@@ -21,18 +21,6 @@ patches:
 images:
   - name: octopussamples/octopetshop-database
     newName: twerthi/octopetshop-database
-<<<<<<< HEAD
-    newTag: 2025.04.10.16
-  - name: octopussamples/octopetshop-productservice
-    newName: twerthi/octopetshop-productservice
-    newTag: 2025.04.10.16
-  - name: octopussamples/octopetshop-shoppingcartservice
-    newName: twerthi/octopetshop-shoppingcartservice
-    newTag: 2025.04.10.16
-  - name: octopussamples/octopetshop-web
-    newName: twerthi/octopetshop-web
-    newTag: 2025.04.10.16
-=======
     newTag: 2025.04.07.15
   - name: octopussamples/octopetshop-productservice
     newName: twerthi/octopetshop-productservice
@@ -43,4 +31,3 @@ images:
   - name: octopussamples/octopetshop-web
     newName: twerthi/octopetshop-web
     newTag: 2025.04.07.15
->>>>>>> 9ca4cc59a67bb16da13d6c482abff75234fe8534
