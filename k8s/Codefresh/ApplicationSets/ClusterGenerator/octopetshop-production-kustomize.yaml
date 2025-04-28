@@ -2,8 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: octopetshop-production
-  annotations:
-    codefresh.io/product: octopetshop  
 spec:
   goTemplate: true
   goTemplateOptions: ["missingkey=error"]
@@ -12,6 +10,8 @@ spec:
   template:
     metadata:
       name: '{{.name}}-octopetshop-production'
+      annotations:
+        codefresh.io/product: octopetshop-{{.name}}      
     spec:
       project: default
       source:
