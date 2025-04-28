@@ -2,6 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: octopetshop-production
+  annotations:
+    codefresh.io/product: octopetshop
 spec:
   generators:
   - list:
