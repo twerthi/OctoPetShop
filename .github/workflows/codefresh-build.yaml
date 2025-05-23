@@ -80,7 +80,7 @@ jobs:
         CF_API_KEY: ${{ secrets.CODEFRESH_TOKEN }}
 
         # Name of Container registry integration
-        CF_CONTAINER_REGISTRY_INTEGRATION: 'twerthi-dockerhub'
+#        CF_CONTAINER_REGISTRY_INTEGRATION: 'twerthi-dockerhub'
 
         # The git branch which is related for the commit
         CF_GIT_BRANCH: ${{ github.ref_name }}
