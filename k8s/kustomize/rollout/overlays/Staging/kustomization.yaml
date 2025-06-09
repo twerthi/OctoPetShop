@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: staging
 resources:
-- ../../base
+  - ../../base
 
 patches:
   - target:
@@ -10,24 +10,24 @@ patches:
       name: octopetshop-web-deployment
     path: octopetshop-web-deployment.yaml
   - target:
-      kind: Service
-      name: web-loadbalancer
-    path: octopetshop-loadbalancer.yaml
+      kind: Ingress
+      name: octopetshop-ingress
+    path: octopetshop-ingress.yaml
   - target:
       kind: Service
       name: octopetshop-web-cluster-ip-service
     path: octopetshop-web-cluster-ip-service.yaml
 
 images:
-- name: octopussamples/octopetshop-database
-  newName: twerthi/octopetshop-database
-  newTag: 2024.207.20.0912
-- name: octopussamples/octopetshop-productservice
-  newName: twerthi/octopetshop-productservice
-  newTag: 2024.207.20.0912
-- name: octopussamples/octopetshop-shoppingcartservice
-  newName: twerthi/octopetshop-shoppingcartservice
-  newTag: 2024.207.20.0912
-- name: octopussamples/octopetshop-web
-  newName: twerthi/octopetshop-web
-  newTag: 2024.207.20.0912
+  - name: octopussamples/octopetshop-database
+    newName: twerthi/octopetshop-database
+    newTag: 2025.06.06.35
+  - name: octopussamples/octopetshop-productservice
+    newName: twerthi/octopetshop-productservice
+    newTag: 2025.06.06.35
+  - name: octopussamples/octopetshop-shoppingcartservice
+    newName: twerthi/octopetshop-shoppingcartservice
+    newTag: 2025.06.06.35
+  - name: octopussamples/octopetshop-web
+    newName: twerthi/octopetshop-web
+    newTag: 2025.06.06.35
