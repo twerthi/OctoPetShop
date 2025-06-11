@@ -24,7 +24,11 @@ jobs:
          jq '.AppSettings.AppVersion' OctopusSamples.OctoPetShop.Web/appsettings.json
          echo "GitHub ref name: ${{ github.ref_name }}"
          echo "LATEST_PR=$(gh pr list --state merged --json mergedAt,headRefName --jq 'sort_by(.mergedAt) | reverse | .[0].headRefName')" >> $GITHUB_ENV
-         echo "LATEST_PR=${{ env.LATEST_PR }}"
+
+    - name: test echo
+      run: |
+        echo "PACKAGE_VERSION=${{ env.PACKAGE_VERSION }}"
+        echo "LATEST_PR=${{ env.LATEST_PR }}"
 
     # # Login to dockerhub
     # - name: Login to Docker Hub
