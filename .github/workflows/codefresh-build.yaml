@@ -23,7 +23,7 @@ jobs:
          jq --arg version $PACKAGE_VERSION '.AppSettings.AppVersion = "" + $version + ""' OctopusSamples.OctoPetShop.Web/appsettings.json > tmp.json && mv tmp.json OctopusSamples.OctoPetShop.Web/appsettings.json
          jq '.AppSettings.AppVersion' OctopusSamples.OctoPetShop.Web/appsettings.json
          echo "GitHub ref name: ${{ github.ref_name }}"
-         gh pr list --state merged --json headRefName 
+         gh pr list --state merged --json headRefName --jq 'sort_by(.mergedAt) | reverse | .[0].headRefName
 
     # # Login to dockerhub
     # - name: Login to Docker Hub
