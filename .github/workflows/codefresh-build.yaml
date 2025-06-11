@@ -2,6 +2,9 @@ name: Codefresh Build
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -51,7 +54,9 @@ jobs:
         CF_CONTAINER_REGISTRY_INTEGRATION: 'twerthi-dockerhub'
 
         # The git branch which is related for the commit
-        CF_GIT_BRANCH: ${{ github.ref_name }}
+        #CF_GIT_BRANCH: ${{ github.ref_name }}
+        CF_GIT_BRANCH: ${{ github.head_ref }}
+
 
         # Image path to enrich 
         CF_IMAGE: docker.io/${{ secrets.DOCKER_USERNAME }}/octopetshop-database:${{ env.PACKAGE_VERSION }}
@@ -83,8 +88,8 @@ jobs:
         CF_CONTAINER_REGISTRY_INTEGRATION: 'twerthi-dockerhub'
 
         # The git branch which is related for the commit
-        CF_GIT_BRANCH: ${{ github.ref_name }}
-        #CF_GIT_BRANCH: "update-version"
+        #CF_GIT_BRANCH: ${{ github.ref_name }}
+        CF_GIT_BRANCH: ${{ github.head_ref }}
 
         # Image path to enrich 
         CF_IMAGE: docker.io/${{ secrets.DOCKER_USERNAME }}/octopetshop-web:${{ env.PACKAGE_VERSION }}
@@ -116,7 +121,8 @@ jobs:
         CF_CONTAINER_REGISTRY_INTEGRATION: 'twerthi-dockerhub'
 
         # The git branch which is related for the commit
-        CF_GIT_BRANCH: ${{ github.ref_name }}
+        #CF_GIT_BRANCH: ${{ github.ref_name }}
+        CF_GIT_BRANCH: ${{ github.head_ref }}
 
         # Image path to enrich 
         CF_IMAGE: docker.io/${{ secrets.DOCKER_USERNAME }}/octopetshop-productservice:${{ env.PACKAGE_VERSION }}
@@ -148,7 +154,8 @@ jobs:
         CF_CONTAINER_REGISTRY_INTEGRATION: 'twerthi-dockerhub'
 
         # The git branch which is related for the commit
-        CF_GIT_BRANCH: ${{ github.ref_name }}
+        #CF_GIT_BRANCH: ${{ github.ref_name }}
+        CF_GIT_BRANCH: ${{ github.head_ref }}
 
         # Image path to enrich 
         CF_IMAGE: docker.io/${{ secrets.DOCKER_USERNAME }}/octopetshop-shoppingcartservice:${{ env.PACKAGE_VERSION }}
