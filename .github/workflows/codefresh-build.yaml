@@ -83,7 +83,8 @@ jobs:
         CF_CONTAINER_REGISTRY_INTEGRATION: 'twerthi-dockerhub'
 
         # The git branch which is related for the commit
-        CF_GIT_BRANCH: ${{ github.ref_name }}
+        #CF_GIT_BRANCH: ${{ github.ref_name }}
+        CF_GIT_BRANCH: "update-version"
 
         # Image path to enrich 
         CF_IMAGE: docker.io/${{ secrets.DOCKER_USERNAME }}/octopetshop-web:${{ env.PACKAGE_VERSION }}
