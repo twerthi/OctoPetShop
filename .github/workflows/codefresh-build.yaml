@@ -78,7 +78,7 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        #CF_JIRA_MESSAGE: 'OC-1'
+        CF_JIRA_MESSAGE: 'OC-'
 
         # # Jira project filter
         CF_JIRA_PROJECT_PREFIX: "OC"
@@ -111,7 +111,7 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-1'
+        CF_JIRA_MESSAGE: 'OC-'
 
         # # Jira project filter
         CF_JIRA_PROJECT_PREFIX: "OC"
@@ -144,7 +144,7 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-1'
+        CF_JIRA_MESSAGE: 'OC-'
 
         # # Jira project filter
         CF_JIRA_PROJECT_PREFIX: "OC"
@@ -177,7 +177,7 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-1'
+        CF_JIRA_MESSAGE: 'OC-'
 
         # # Jira project filter
         CF_JIRA_PROJECT_PREFIX: "OC"
