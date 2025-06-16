@@ -42,7 +42,11 @@ jobs:
     - name: Gather commit messages
       shell: pwsh
       run: |
-        Write-Host "The lasest PR is $($env:LATEST_PR)"
+        $commits = (gh pr view fix-cat-entry --json commits | ConvertFrom-JSON)
+        foreach ($commit in $commits)
+        {
+          $commit
+        }
       
 
     # Build docker images
@@ -85,7 +89,7 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: ${{ github.event.head_commit.message }}
+        CF_JIRA_MESSAGE: "OC"
 
         # # Jira project filter
         CF_JIRA_PROJECT_PREFIX: "OC"
