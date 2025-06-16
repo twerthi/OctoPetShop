@@ -106,7 +106,7 @@ jobs:
         CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "OC"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest
 
     - name: Codefresh image reporter - Web
@@ -136,10 +136,10 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-'
+        CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "OC"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest 
 
     - name: Codefresh image reporter - ProductService
@@ -169,10 +169,10 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-'
+        CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "OC"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest            
 
     - name: Codefresh image reporter - ShoppingCartService
@@ -202,7 +202,7 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-' 
+        CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
         CF_JIRA_PROJECT_PREFIX: "OC"
