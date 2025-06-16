@@ -51,7 +51,7 @@ jobs:
           $commitMessages += @($commit.messageHeadline)
         }
 
-        $commitString = $commitMessages -join "\n"
+        $commitString = $commitMessages -join ", "
 
         Write-Host "CommitString: $commitString"
 
