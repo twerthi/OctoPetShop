@@ -40,6 +40,8 @@ jobs:
 
     # Gather commit messages to pass to JIRA_MESSAGE
     - name: Gather commit messages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       shell: pwsh
       run: |
         $commits = (gh pr view fix-cat-entry --json commits | ConvertFrom-JSON)
