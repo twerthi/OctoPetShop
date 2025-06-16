@@ -106,7 +106,7 @@ jobs:
         CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "/CTPTSHP-\d+/gmi"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest
 
     - name: Codefresh image reporter - Web
@@ -139,7 +139,7 @@ jobs:
         CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "/CTPTSHP-\d+/gmi"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest 
 
     - name: Codefresh image reporter - ProductService
@@ -172,7 +172,7 @@ jobs:
         CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "/CTPTSHP-\d+/gmi"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest            
 
     - name: Codefresh image reporter - ShoppingCartService
@@ -205,5 +205,5 @@ jobs:
         CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "/CTPTSHP-\d+/gmi"
+        CF_JIRA_PROJECT_PREFIX: "OC"
       uses: codefresh-io/codefresh-report-image@latest                  
