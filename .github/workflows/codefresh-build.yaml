@@ -45,7 +45,7 @@ jobs:
       shell: pwsh
       run: |
         $commits = (gh pr view fix-cat-entry --json commits | ConvertFrom-JSON)
-        foreach ($commit in $commits)
+        foreach ($commit in $commits.commits)
         {
           $commit
         }
