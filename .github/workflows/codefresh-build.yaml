@@ -38,6 +38,13 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PAT }}
 
+    # Gather commit messages to pass to JIRA_MESSAGE
+    - name: Gather commit messages
+      shell: pwsh
+      run: |
+        Write-Host "The lasest PR is $($env:LATEST_PR)"
+      
+
     # Build docker images
     - name: Build Docker Images
       run: |
