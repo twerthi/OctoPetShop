@@ -44,12 +44,22 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       shell: pwsh
       run: |
-        $commits = (gh pr view fix-cat-entry --json commits | ConvertFrom-JSON)
-        foreach ($commit in $commits.commits)
+        $commitMessages = @()
+        $pr = (gh pr view fix-cat-entry --json commits | ConvertFrom-JSON)
+        foreach ($commit in $pr.commits)
         {
-          $commit
+          $commitMessages += @($commit.messageHeadline)
         }
-      
+
+        $commitString = $commitMessages -join "`n"
+
+        # Save to environment variable
+        "COMMIT_MESSAGES=$commitString" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+    # Display the last pr branch name and version
+    - name: Display Last PR commits
+      run: |
+        echo "Commits: ${{ env.COMMIT_MESSAGE }}"
 
     # Build docker images
     - name: Build Docker Images
