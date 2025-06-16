@@ -106,7 +106,7 @@ jobs:
         CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
+        CF_JIRA_PROJECT_PREFIX: '/CTPTSHP-\d+/gmi'
       uses: codefresh-io/codefresh-report-image@latest
 
     - name: Codefresh image reporter - Web
