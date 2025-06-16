@@ -56,7 +56,8 @@ jobs:
         Write-Host "CommitString: $commitString"
 
         # Save to environment variable
-        echo "COMMIT_MESSAGES=$commitString" >> $GITHUB_ENV
+        #echo "COMMIT_MESSAGES=$commitString" >> $GITHUB_ENV
+        Add-Content -Path $env:GITHUB_ENV -Value "COMMIT_MESSAGES=$commitString" -Encoding utf8
 
     # Display the last pr branch name and version
     - name: Display Last PR commits
