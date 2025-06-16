@@ -56,8 +56,6 @@ jobs:
         Write-Host "CommitString: $commitString"
 
         # Save to environment variable
-        #"COMMIT_MESSAGES=$commitString" | Out-File -FilePath $env:GITHUB_ENV -Append
-        #Add-Content -Path $env:GITHUB_ENV -Value "COMMIT_MESSAGES=$commitString" -Encoding utf-8
         echo "COMMIT_MESSAGES=$($commitString)" >> $GITHUB_ENV
 
     # Display the last pr branch name and version
@@ -105,10 +103,10 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: "OC"
+        CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "OC"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest
 
     - name: Codefresh image reporter - Web
@@ -138,10 +136,10 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-'
+        CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "OC"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest 
 
     - name: Codefresh image reporter - ProductService
@@ -171,10 +169,10 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-'
+        CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
-        CF_JIRA_PROJECT_PREFIX: "OC"
+        CF_JIRA_PROJECT_PREFIX: "CTPTSHP"
       uses: codefresh-io/codefresh-report-image@latest            
 
     - name: Codefresh image reporter - ShoppingCartService
@@ -204,7 +202,7 @@ jobs:
         CF_ISSUE_TRACKING_INTEGRATION: 'twerthi-jira' 
 
         # # String starting with the issue ID to associate with image
-        CF_JIRA_MESSAGE: 'OC-' 
+        CF_JIRA_MESSAGE: "${{ env.COMMIT_MESSAGES }}"
 
         # # Jira project filter
         CF_JIRA_PROJECT_PREFIX: "OC"
