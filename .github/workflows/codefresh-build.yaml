@@ -53,8 +53,6 @@ jobs:
 
         $commitString = $commitMessages -join ", "
 
-        Write-Host "CommitString: $commitString"
-
         # Save to environment variable
         echo "COMMIT_MESSAGES=$commitString" >> $env:GITHUB_ENV
 
