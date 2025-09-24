@@ -27,7 +27,7 @@ images:
     newTag: 2025.06.20.83
   - name: octopussamples/octopetshop-shoppingcartservice
     newName: twerthi/octopetshop-shoppingcartservice
-    newTag: 2025.06.20.83
+    newTag: 2025.06.30.93
   - name: octopussamples/octopetshop-web
     newName: twerthi/octopetshop-web
     newTag: 2025.06.20.83
