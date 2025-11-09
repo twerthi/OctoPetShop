@@ -9,4 +9,4 @@
   value: 5001
 - op: replace
   path: /spec/ports/1/targetPort
-  value: 5001
+  value: 5001 
